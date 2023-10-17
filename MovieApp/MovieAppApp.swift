@@ -11,7 +11,10 @@ import SwiftUI
 struct MovieAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                AddMovieScreen()
+            }
         }
+        .modelContainer(for: [Movie.self])
     }
 }
